@@ -43,7 +43,7 @@ function Search() {
           onChange={(e) => setSearchValue(e.target.value)}
         />
 
-        <button
+        {/* <button
           onClick={() => setShowFilters(!showFilters)}
           className="flex items-center justify-center cursor-pointer md:px-3 py-2 mr-1 text-sm font-medium text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-200"
         >
@@ -62,7 +62,7 @@ function Search() {
             />
           </svg>
           Filters
-        </button>
+        </button> */}
 
         <button
           onClick={() => dispatch(setSearch(searchValue))}

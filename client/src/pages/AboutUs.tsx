@@ -2,10 +2,11 @@ import Navbar from "../components/Navbar/Navbar"
 // import Footer from "../components/Navbar/Footer"
 import { useState } from "react"
 import SetUserDataToStore from "../service/userdata/SetDataToStore"
+import { useNavigate } from "react-router-dom"
 
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState("mission")
-
+  const navigate = useNavigate();
   // Company values
   const values = [
     {
@@ -63,8 +64,8 @@ export default function AboutUs() {
     {
       name: "Rajat Kumar Sahoo",
       role: "",
-      image: "https://imgs.search.brave.com/2CzWUdLpc0Y132N9e2QM7D2kOTlY23z6yQ0PPhaEkYY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/bWFucy1mYWNlLWZs/YXQtc3R5bGVfOTAy/MjAtMjg3Ny5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQw",
-      link:""
+      image: "/rajat.jpeg",
+      link:"https://www.linkedin.com/in/rajat-kumar-sahoo-893b4325a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
       name: "Arpita Biswal",
@@ -253,7 +254,11 @@ export default function AboutUs() {
           <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
             Join thousands of satisfied travelers who choose RapidRoom for their accommodation needs.
           </p>
-          <button className="bg-white text-teal-600 font-bold py-3 px-8 rounded-full hover:bg-teal-50 transition duration-300">
+          <button className="bg-white text-teal-600 font-bold py-3 px-8 rounded-full hover:bg-teal-50 transition duration-300"
+          onClick={()=>{
+            navigate("/home")
+          }}
+          >
             Book Your Stay Now
           </button>
         </div>
