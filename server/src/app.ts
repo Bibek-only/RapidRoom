@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-import logger from "./utils/Logger.js";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
 import Razorpay from "razorpay";
@@ -22,8 +21,8 @@ app.use(express.json());
 
 app.use(
     cors({
-        origin:[
-            "*",
+        origin: [
+            process.env.FRONTEND_URL!,
             "http://localhost:5173",
             "https://rapidroom.tech",
         ],
@@ -32,22 +31,6 @@ app.use(
 );
 app.use(cookieParser());
 app.use(passport.initialize());
-
-app.use(
-    morgan(morganFormat, {
-        stream: {
-            write: (message) => {
-                const logObject = {
-                    method: message.split(" ")[0],
-                    url: message.split(" ")[1],
-                    status: message.split(" ")[2],
-                    responseTime: message.split(" ")[3],
-                };
-                logger.info(JSON.stringify(logObject));
-            },
-        },
-    }),
-);
 
 //healthCheck
 import healthCheckRoute from "./routes/healthCheck.routes.js";
@@ -89,7 +72,7 @@ app.use("/api/v1/user", paymentRoute);
 app.use("/api/v1/image", uploadRoutes);
 
 //email verification
-app.use("/api/v1",emailRouter);
+app.use("/api/v1", emailRouter);
 
 //payment router
 

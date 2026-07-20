@@ -86,6 +86,7 @@ export const userSignup = async (req: Request | any, res: Response | any) => {
                 fullName: fullName,
                 password: hashedPassword,
                 profileImage: imageUrl || "",
+                isEmailVerified: true,
                 isHost: isHost,
                 address: {
                     create: {
