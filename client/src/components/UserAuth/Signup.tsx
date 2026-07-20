@@ -1,33 +1,21 @@
 import { useState } from "react";
 import { IoMdClose, IoMdEye, IoMdEyeOff } from "react-icons/io";
-import facebookLogo from "../../assets/icons/facebook.logo.png";
-import googleLogo from "../../assets/icons/google.logo.png";
+
 import { useForm, type SubmitHandler } from "react-hook-form";
 import type { signupTypeFrontend } from "@bibek-samal/traveltrove";
 import { signupManual } from "../../service/exportServices";
-import { notifyError } from "../../lib/Toast";
-import { setEmail } from "../../store/reducers/email.reducer";
+import { notifyError, notifySuccess } from "../../lib/Toast";
 
 // State management
 import type { AppDispatch, RootState } from "../../store/store";
 import {
   flipSignUp,
   flipSignin,
-  flipOtpverificaton
 } from "../../store/reducers/showAuthCard.reducers";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
-import API from "../../service/api";
+import { useNavigate } from "react-router-dom";
 
-const handleGoogleLogin = () => {
-  window.open("http://localhost:3000/api/v1/auth/google", "_self");
-  localStorage.setItem("loggedin", "true");
-};
 
-const handleFacebookLogin = () => {
-  window.open("http://localhost:3000/api/v1/auth/facebook", "_self");
-  localStorage.setItem("loggedin", "true");
-};
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -38,8 +26,8 @@ const Signup = () => {
   };
 
   // State management
-  const { showSignup, showSignin, showOtpVerificaton } = useSelector(
-    (state: RootState) => state.showAuthCardReducer
+  const { showSignup, showSignin } = useSelector(
+    (state: RootState) => state.showAuthCardReducer,
   );
   const dispatch: AppDispatch = useDispatch();
   // const { email } = useSelector((state: RootState) => state.emailReducer);
@@ -50,39 +38,18 @@ const Signup = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<signupTypeFrontend>();
+  const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<signupTypeFrontend> = async (data) => {
     setShowLoader(true);
     const res = await signupManual(data);
     if (res.success === true) {
-      //send the otp reqest from fronted to backend
-      //open the otp panned
-      //send the opt and email to the backend
-      //verify the enmail
-      // set islogedin true
-      try {
-        dispatch(setEmail(res.email));
-        const otpRes = await axios.post(`${API}/send-otp`,{
-          email: res.email
-        })
-        console.log("Here is the opt res",otpRes)
-        if(otpRes.data.success === true){
-          //open the otp pannel
-          dispatch(flipOtpverificaton(showOtpVerificaton));
-        }
-
-
-      } catch (error) {
-        console.log(error);
-        notifyError("Error in otp verification")
-      }
-      
-
-
-      // localStorage.setItem("loggedin", "true");
-      // setShowLoader(false);
-      // navigate("/home");
-      // notifySuccess("Welcome to RapidRoom!");
+      dispatch(flipSignUp(true));
+      dispatch(flipSignin(true));
+      localStorage.setItem("loggedin", "true");
+      navigate("/home");
+      notifySuccess("Welcome to RapidRoom!");
+      return;
       dispatch(flipSignUp(showSignup));
     } else {
       notifyError(res.message);
@@ -158,7 +125,6 @@ const Signup = () => {
                   id="email"
                   className="w-full px-4 pt-6 pb-2 bg-transparent focus:outline-none text-gray-800"
                   placeholder=" "
-                  
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -282,7 +248,30 @@ aspect-square w-8 flex justify-center items-center text-yellow-700"
           </div>
 
           {/* Social login */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+          {/* Sign in link */}
+          <p className="mt-8 text-center text-sm text-gray-600">
+            Already have an account?{" "}
+            <button
+              onClick={() => {
+                dispatch(flipSignUp(showSignup));
+                dispatch(flipSignin(showSignin));
+              }}
+              className="font-medium text-primary hover:text-primary hover:underline"
+            >
+              Sign in
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Signup;
+
+{
+  /* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               onClick={handleGoogleLogin}
               className="flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
@@ -307,25 +296,5 @@ aspect-square w-8 flex justify-center items-center text-yellow-700"
                 Facebook
               </span>
             </button>
-          </div>
-
-          {/* Sign in link */}
-          <p className="mt-8 text-center text-sm text-gray-600">
-            Already have an account?{" "}
-            <button
-              onClick={() => {
-                dispatch(flipSignUp(showSignup));
-                dispatch(flipSignin(showSignin));
-              }}
-              className="font-medium text-primary hover:text-primary hover:underline"
-            >
-              Sign in
-            </button>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Signup;
+          </div> */
+}

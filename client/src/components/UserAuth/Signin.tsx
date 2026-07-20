@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IoMdClose, IoMdEye, IoMdEyeOff } from "react-icons/io";
-import facebookLogo from "../../assets/icons/facebook.logo.png";
-import googleLogo from "../../assets/icons/google.logo.png";
+
 import { SigninType } from "@bibek-samal/traveltrove";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { signinManual } from "../../service/exportServices";
@@ -14,22 +13,14 @@ import {
   flipOtpverificaton,
   flipSignUp,
   flipSignin,
-  flipForgotPass
+  flipForgotPass,
 } from "../../store/reducers/showAuthCard.reducers";
 import { useDispatch, useSelector } from "react-redux";
 import { setEmail } from "../../store/reducers/email.reducer";
 import axios from "axios";
 import API from "../../service/api";
 
-const handleGoogleLogin = () => {
-  localStorage.setItem("loggedin", "true");
-  window.open(`${API}/auth/google`, "_self");
-};
 
-const handleFacebookLogin = () => {
-  localStorage.setItem("loggedin", "true");
-  window.open(`${API}/auth/facebook`, "_self");
-};
 
 const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -42,9 +33,8 @@ const Signin = () => {
   };
 
   // State management
-  const { showSignup, showSignin, showOtpVerificaton,showForgotPass } = useSelector(
-    (state: RootState) => state.showAuthCardReducer
-  );
+  const { showSignup, showSignin, showOtpVerificaton, showForgotPass } =
+    useSelector((state: RootState) => state.showAuthCardReducer);
   const dispatch: AppDispatch = useDispatch();
 
   // React-hook form actions
@@ -66,14 +56,12 @@ const Signin = () => {
         navigate("/home");
         notifySuccess("Welcome back!");
         dispatch(flipSignin(showSignin));
-
-        
       } else {
         //store the email in the store
-        
+
         try {
           dispatch(setEmail(res.email));
-          
+
           const otpRes = await axios.post(`${API}/send-otp`, {
             email: res.email,
           });
@@ -93,7 +81,6 @@ const Signin = () => {
           setShowLoader(false);
           return;
         }
-        
       }
     } else {
       notifyError("Signin failed!");
@@ -205,7 +192,7 @@ const Signin = () => {
             {/* Forgot password link */}
             <div className="text-right">
               <button
-                onClick={()=>{
+                onClick={() => {
                   dispatch(flipSignin(showSignin));
                   dispatch(flipForgotPass(showForgotPass));
                 }}
@@ -249,7 +236,7 @@ aspect-square w-8 flex justify-center items-center text-yellow-700"
           </div>
 
           {/* Social login */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               onClick={handleGoogleLogin}
               className="flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
@@ -274,7 +261,7 @@ aspect-square w-8 flex justify-center items-center text-yellow-700"
                 Facebook
               </span>
             </button>
-          </div>
+          </div> */}
 
           {/* Sign up link */}
           <p className="mt-8 text-center text-sm text-gray-600">
