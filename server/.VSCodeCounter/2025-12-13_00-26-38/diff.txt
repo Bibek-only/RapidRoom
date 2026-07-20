@@ -1,0 +1,240 @@
+Date : 2025-12-13 00:26:38
+Directory : /home/bibek/Projects/Rapid-Room/server
+Total : 177 files,  7911 codes, 529 comments, 305 blanks, all 8745 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          4 |      3,698 |          0 |          3 |      3,701 |
+| JavaScript         |         75 |      3,543 |        217 |         75 |      3,835 |
+| MS SQL             |         20 |        289 |        211 |        119 |        619 |
+| Prisma             |          1 |        202 |          7 |         24 |        233 |
+| TypeScript         |         75 |        162 |          5 |         75 |        242 |
+| JSON with Comments |          1 |         14 |         89 |          9 |        112 |
+| Ignore             |          1 |          3 |          0 |          0 |          3 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                   |        177 |      7,911 |        529 |        305 |      8,745 |
+| . (Files)                                                                                                                           |          6 |      3,715 |         89 |         12 |      3,816 |
+| dist                                                                                                                                |        150 |      3,705 |        222 |        150 |      4,077 |
+| dist (Files)                                                                                                                        |          4 |         75 |         11 |          4 |         90 |
+| dist/config                                                                                                                         |          2 |         87 |          1 |          2 |         90 |
+| dist/controller                                                                                                                     |        100 |      3,146 |        202 |        100 |      3,448 |
+| dist/db                                                                                                                             |          2 |          7 |          1 |          2 |         10 |
+| dist/helper                                                                                                                         |          2 |         17 |          0 |          2 |         19 |
+| dist/middleware                                                                                                                     |          6 |         73 |          2 |          6 |         81 |
+| dist/routes                                                                                                                         |         24 |        180 |          3 |         24 |        207 |
+| dist/utils                                                                                                                          |         10 |        120 |          2 |         10 |        132 |
+| prisma                                                                                                                              |         21 |        491 |        218 |        143 |        852 |
+| prisma (Files)                                                                                                                      |          1 |        202 |          7 |         24 |        233 |
+| prisma/migrations                                                                                                                   |         20 |        289 |        211 |        119 |        619 |
+| prisma/migrations/20250117141352_init                                                                                               |          1 |         87 |         22 |         30 |        139 |
+| prisma/migrations/20250121133508_init                                                                                               |          1 |         35 |         35 |         27 |         97 |
+| prisma/migrations/20250121161948_payment_added                                                                                      |          1 |         28 |         19 |         15 |         62 |
+| prisma/migrations/20250121163740_payment_added                                                                                      |          1 |          6 |         12 |          5 |         23 |
+| prisma/migrations/20250121181957_update_foreservation                                                                               |          1 |          5 |         11 |          2 |         18 |
+| prisma/migrations/20250129084935_added_longitude_latitude_and_unique_in_review                                                      |          1 |          3 |          8 |          2 |         13 |
+| prisma/migrations/20250206011312_hotel_change                                                                                       |          1 |         32 |         20 |          6 |         58 |
+| prisma/migrations/20250216014344_added_hotel_draft                                                                                  |          1 |          1 |          1 |          1 |          3 |
+| prisma/migrations/20250226154844_added_admin_schema                                                                                 |          1 |         19 |          2 |          2 |         23 |
+| prisma/migrations/20250227174006_gov_id_and_ph_number_made_bigint                                                                   |          1 |          2 |          1 |          1 |          4 |
+| prisma/migrations/20250324234244_htl                                                                                                |          1 |         11 |         14 |          4 |         29 |
+| prisma/migrations/20250326231235_n                                                                                                  |          1 |          6 |         10 |          4 |         20 |
+| prisma/migrations/20250329233330_addreviewandrtingtotal                                                                             |          1 |          2 |          1 |          1 |          4 |
+| prisma/migrations/20250331010320_init                                                                                               |          1 |          5 |          8 |          5 |         18 |
+| prisma/migrations/20250401072823_update_hotel_types                                                                                 |          1 |         10 |          8 |          2 |         20 |
+| prisma/migrations/20250401073451_update_hotel_amenities                                                                             |          1 |         23 |         16 |          1 |         40 |
+| prisma/migrations/20250405083210_ptm                                                                                                |          1 |          3 |          9 |          3 |         15 |
+| prisma/migrations/20250409041414_opt                                                                                                |          1 |          9 |          6 |          6 |         21 |
+| prisma/migrations/20250411043450_add_wishlist_unique_constraint                                                                     |          1 |          1 |          7 |          1 |          9 |
+| prisma/migrations/20250413184428_kya                                                                                                |          1 |          1 |          1 |          1 |          3 |
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                            | language           | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /home/bibek/Projects/Rapid-Room/server/.prettierignore                                                                              | Ignore             |          3 |          0 |          0 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/.prettierrc                                                                                  | JSON               |          7 |          0 |          1 |          8 |
+| /home/bibek/Projects/Rapid-Room/server/dist/app.d.ts                                                                                | TypeScript         |          4 |          0 |          1 |          5 |
+| /home/bibek/Projects/Rapid-Room/server/dist/app.js                                                                                  | JavaScript         |         63 |         11 |          1 |         75 |
+| /home/bibek/Projects/Rapid-Room/server/dist/config/passport.d.ts                                                                    | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/config/passport.js                                                                      | JavaScript         |         85 |          1 |          1 |         87 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/addNewHotel.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/addNewHotel.controller.js                                                    | JavaScript         |         97 |         19 |          1 |        117 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/addNewReview.controller.d.ts                                                 | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/addNewReview.controller.js                                                   | JavaScript         |         69 |          6 |          1 |         76 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/addWishlist.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/addWishlist.controller.js                                                    | JavaScript         |         28 |          0 |          1 |         29 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_approveHost.d.ts                                                       | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_approveHost.js                                                         | JavaScript         |         44 |          2 |          1 |         47 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_approveHotel.d.ts                                                      | TypeScript         |          3 |          0 |          1 |          4 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_approveHotel.js                                                        | JavaScript         |         49 |          2 |          1 |         52 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllHosts.d.ts                                                       | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllHosts.js                                                         | JavaScript         |         80 |          6 |          1 |         87 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllHotels.d.ts                                                      | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllHotels.js                                                        | JavaScript         |         63 |          1 |          1 |         65 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllPayments.d.ts                                                    | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllPayments.js                                                      | JavaScript         |         62 |          2 |          1 |         65 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllUsers.d.ts                                                       | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAllUsers.js                                                         | JavaScript         |         57 |          3 |          1 |         61 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAnalysis.d.ts                                                       | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_getAnalysis.js                                                         | JavaScript         |        102 |          3 |          1 |        106 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_paymentDashboard.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_paymentDashboard.js                                                    | JavaScript         |         51 |          2 |          1 |         54 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_rejectHost.d.ts                                                        | TypeScript         |          2 |          5 |          1 |          8 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_rejectHost.js                                                          | JavaScript         |         48 |          7 |          1 |         56 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_rejectHotels.d.ts                                                      | TypeScript         |          3 |          0 |          1 |          4 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/admin_rejectHotels.js                                                        | JavaScript         |         53 |          2 |          1 |         56 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/cancelReservatin.controller.d.ts                                             | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/cancelReservatin.controller.js                                               | JavaScript         |         69 |         15 |          1 |         85 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/createAdmin.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/createAdmin.controller.js                                                    | JavaScript         |         50 |          0 |          1 |         51 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/createReview.controller.d.ts                                                 | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/createReview.controller.js                                                   | JavaScript         |         37 |          2 |          1 |         40 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteHotel.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteHotel.controller.js                                                    | JavaScript         |         30 |          0 |          1 |         31 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteImage.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteImage.controller.js                                                    | JavaScript         |         31 |          4 |          1 |         36 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteReview.controller.d.ts                                                 | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteReview.controller.js                                                   | JavaScript         |         65 |          7 |          1 |         73 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteUser.controller.d.ts                                                   | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/deleteUser.controller.js                                                     | JavaScript         |         49 |          1 |          1 |         51 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/editReview.controller.d.ts                                                   | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/editReview.controller.js                                                     | JavaScript         |         34 |          0 |          1 |         35 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/editUser.controller.d.ts                                                     | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/editUser.controller.js                                                       | JavaScript         |         98 |          5 |          1 |        104 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getAllHotels.controller.d.ts                                                 | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getAllHotels.controller.js                                                   | JavaScript         |         60 |          0 |          1 |         61 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostAllReservations.controller.d.ts                                       | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostAllReservations.controller.js                                         | JavaScript         |         59 |          1 |          1 |         61 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostEarnings.controller.d.ts                                              | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostEarnings.controller.js                                                | JavaScript         |         68 |          0 |          1 |         69 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostHotels.controller.d.ts                                                | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostHotels.controller.js                                                  | JavaScript         |         64 |          2 |          1 |         67 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostStats.controller.d.ts                                                 | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostStats.controller.js                                                   | JavaScript         |         98 |          0 |          1 |         99 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostTodayCheckin.controller.d.ts                                          | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHostTodayCheckin.controller.js                                            | JavaScript         |        112 |          3 |          1 |        116 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHotelById.controller.d.ts                                                 | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getHotelById.controller.js                                                   | JavaScript         |        132 |          1 |          1 |        134 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getMyBookings.controller.d.ts                                                | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getMyBookings.controller.js                                                  | JavaScript         |         81 |          0 |          1 |         82 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getOveralRating.controller.d.ts                                              | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getOveralRating.controller.js                                                | JavaScript         |        104 |          5 |          1 |        110 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getRazorpayKey.controller.d.ts                                               | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getRazorpayKey.controller.js                                                 | JavaScript         |          8 |          0 |          1 |          9 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getReview.controller.d.ts                                                    | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getReview.controller.js                                                      | JavaScript         |         85 |          2 |          1 |         88 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getUserInformation.controller.d.ts                                           | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getUserInformation.controller.js                                             | JavaScript         |         58 |          1 |          1 |         60 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getWishlists.controller.d.ts                                                 | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/getWishlists.controller.js                                                   | JavaScript         |         50 |          0 |          1 |         51 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/healthCheck.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/healthCheck.controller.js                                                    | JavaScript         |         14 |          0 |          1 |         15 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/payment.controller.d.ts                                                      | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/payment.controller.js                                                        | JavaScript         |         20 |          0 |          1 |         21 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/paymentVerification.controller.d.ts                                          | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/paymentVerification.controller.js                                            | JavaScript         |         75 |         11 |          1 |         87 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/publishHotel.controller.d.ts                                                 | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/publishHotel.controller.js                                                   | JavaScript         |         39 |          0 |          1 |         40 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/removeWishlist.controller.d.ts                                               | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/removeWishlist.controller.js                                                 | JavaScript         |         25 |          0 |          1 |         26 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/reserveHotel.controller.d.ts                                                 | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/reserveHotel.controller.js                                                   | JavaScript         |        162 |         36 |          1 |        199 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/sendOtp.controller.d.ts                                                      | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/sendOtp.controller.js                                                        | JavaScript         |         49 |          9 |          1 |         59 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/setHostReservationpaymentStatusRefunded.controller.d.ts                      | TypeScript         |          3 |          0 |          1 |          4 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/setHostReservationpaymentStatusRefunded.controller.js                        | JavaScript         |         66 |          4 |          1 |         71 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/socialAuth.controller.d.ts                                                   | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/socialAuth.controller.js                                                     | JavaScript         |         18 |          0 |          1 |         19 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/updatePassword.controller.d.ts                                               | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/updatePassword.controller.js                                                 | JavaScript         |         72 |          9 |          1 |         82 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/uploadImage.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/uploadImage.controller.js                                                    | JavaScript         |         54 |          6 |          1 |         61 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/userLogin.controller.d.ts                                                    | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/userLogin.controller.js                                                      | JavaScript         |         60 |          1 |          1 |         62 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/userLogout.controller.d.ts                                                   | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/userLogout.controller.js                                                     | JavaScript         |         10 |          1 |          1 |         12 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/userSignup.controller.d.ts                                                   | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/userSignup.controller.js                                                     | JavaScript         |         78 |          9 |          1 |         88 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/verifyEmail.controller.d.ts                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/controller/verifyEmail.controller.js                                                    | JavaScript         |         65 |          7 |          1 |         73 |
+| /home/bibek/Projects/Rapid-Room/server/dist/db/db.config.d.ts                                                                       | TypeScript         |          3 |          0 |          1 |          4 |
+| /home/bibek/Projects/Rapid-Room/server/dist/db/db.config.js                                                                         | JavaScript         |          4 |          1 |          1 |          6 |
+| /home/bibek/Projects/Rapid-Room/server/dist/helper/SendEmail.helper.d.ts                                                            | TypeScript         |          7 |          0 |          1 |          8 |
+| /home/bibek/Projects/Rapid-Room/server/dist/helper/SendEmail.helper.js                                                              | JavaScript         |         10 |          0 |          1 |         11 |
+| /home/bibek/Projects/Rapid-Room/server/dist/index.d.ts                                                                              | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/index.js                                                                                | JavaScript         |          7 |          0 |          1 |          8 |
+| /home/bibek/Projects/Rapid-Room/server/dist/middleware/auth.middleware.d.ts                                                         | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/middleware/auth.middleware.js                                                           | JavaScript         |         46 |          1 |          1 |         48 |
+| /home/bibek/Projects/Rapid-Room/server/dist/middleware/isAdmin.middleware.d.ts                                                      | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/middleware/isAdmin.middleware.js                                                        | JavaScript         |          9 |          0 |          1 |         10 |
+| /home/bibek/Projects/Rapid-Room/server/dist/middleware/multer.d.ts                                                                  | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/middleware/multer.js                                                                    | JavaScript         |         12 |          1 |          1 |         14 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/HostDashboard.routes.d.ts                                                        | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/HostDashboard.routes.js                                                          | JavaScript         |         17 |          0 |          1 |         18 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/Hotels.routes.d.ts                                                               | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/Hotels.routes.js                                                                 | JavaScript         |         20 |          0 |          1 |         21 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/admin.routes.d.ts                                                                | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/admin.routes.js                                                                  | JavaScript         |         23 |          2 |          1 |         26 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/emailVerification.route.d.ts                                                     | TypeScript         |          1 |          0 |          1 |          2 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/emailVerification.route.js                                                       | JavaScript         |          6 |          0 |          1 |          7 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/healthCheck.routes.d.ts                                                          | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/healthCheck.routes.js                                                            | JavaScript         |          5 |          0 |          1 |          6 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/payment.routes.d.ts                                                              | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/payment.routes.js                                                                | JavaScript         |          8 |          0 |          1 |          9 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/razorpay.routes.d.ts                                                             | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/razorpay.routes.js                                                               | JavaScript         |          5 |          0 |          1 |          6 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/review.routes.d.ts                                                               | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/review.routes.js                                                                 | JavaScript         |         14 |          0 |          1 |         15 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/socialAuth.routes.d.ts                                                           | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/socialAuth.routes.js                                                             | JavaScript         |          9 |          0 |          1 |         10 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/upload.routes.d.ts                                                               | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/upload.routes.js                                                                 | JavaScript         |          8 |          0 |          1 |          9 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/user.routes.d.ts                                                                 | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/user.routes.js                                                                   | JavaScript         |         32 |          1 |          1 |         34 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/wishlist.routes.d.ts                                                             | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/routes/wishlist.routes.js                                                               | JavaScript         |         10 |          0 |          1 |         11 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/ApiError.d.ts                                                                     | TypeScript         |          8 |          0 |          1 |          9 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/ApiError.js                                                                       | JavaScript         |         14 |          0 |          1 |         15 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/ApiResponse.d.ts                                                                  | TypeScript         |          8 |          0 |          1 |          9 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/ApiResponse.js                                                                    | JavaScript         |         15 |          0 |          1 |         16 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/Logger.d.ts                                                                       | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/Logger.js                                                                         | JavaScript         |         16 |          2 |          1 |         19 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/NodemailerSetup.d.ts                                                              | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/NodemailerSetup.js                                                                | JavaScript         |         11 |          0 |          1 |         12 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/cloudinaryImageHandel.d.ts                                                        | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/dist/utils/cloudinaryImageHandel.js                                                          | JavaScript         |         42 |          0 |          1 |         43 |
+| /home/bibek/Projects/Rapid-Room/server/package-lock.json                                                                            | JSON               |      3,637 |          0 |          1 |      3,638 |
+| /home/bibek/Projects/Rapid-Room/server/package.json                                                                                 | JSON               |         53 |          0 |          1 |         54 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250117141352_init/migration.sql                                          | MS SQL             |         87 |         22 |         30 |        139 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250121133508_init/migration.sql                                          | MS SQL             |         35 |         35 |         27 |         97 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250121161948_payment_added/migration.sql                                 | MS SQL             |         28 |         19 |         15 |         62 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250121163740_payment_added/migration.sql                                 | MS SQL             |          6 |         12 |          5 |         23 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250121181957_update_foreservation/migration.sql                          | MS SQL             |          5 |         11 |          2 |         18 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250129084935_added_longitude_latitude_and_unique_in_review/migration.sql | MS SQL             |          3 |          8 |          2 |         13 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250206011312_hotel_change/migration.sql                                  | MS SQL             |         32 |         20 |          6 |         58 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250216014344_added_hotel_draft/migration.sql                             | MS SQL             |          1 |          1 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250226154844_added_admin_schema/migration.sql                            | MS SQL             |         19 |          2 |          2 |         23 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250227174006_gov_id_and_ph_number_made_bigint/migration.sql              | MS SQL             |          2 |          1 |          1 |          4 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250324234244_htl/migration.sql                                           | MS SQL             |         11 |         14 |          4 |         29 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250326231235_n/migration.sql                                             | MS SQL             |          6 |         10 |          4 |         20 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250329233330_addreviewandrtingtotal/migration.sql                        | MS SQL             |          2 |          1 |          1 |          4 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250331010320_init/migration.sql                                          | MS SQL             |          5 |          8 |          5 |         18 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250401072823_update_hotel_types/migration.sql                            | MS SQL             |         10 |          8 |          2 |         20 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250401073451_update_hotel_amenities/migration.sql                        | MS SQL             |         23 |         16 |          1 |         40 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250405083210_ptm/migration.sql                                           | MS SQL             |          3 |          9 |          3 |         15 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250409041414_opt/migration.sql                                           | MS SQL             |          9 |          6 |          6 |         21 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250411043450_add_wishlist_unique_constraint/migration.sql                | MS SQL             |          1 |          7 |          1 |          9 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/migrations/20250413184428_kya/migration.sql                                           | MS SQL             |          1 |          1 |          1 |          3 |
+| /home/bibek/Projects/Rapid-Room/server/prisma/schema.prisma                                                                         | Prisma             |        202 |          7 |         24 |        233 |
+| /home/bibek/Projects/Rapid-Room/server/tsconfig.json                                                                                | JSON with Comments |         14 |         89 |          9 |        112 |
+| /home/bibek/Projects/Rapid-Room/server/tsconfig.tsbuildinfo                                                                         | JSON               |          1 |          0 |          0 |          1 |
+| Total                                                                                                                               |                    |      7,911 |        529 |        305 |      8,745 |
++-------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
